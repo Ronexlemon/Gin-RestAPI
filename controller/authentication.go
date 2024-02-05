@@ -27,3 +27,5 @@ func Register(context *gin.Context){
 	context.JSON(http.StatusCreated,gin.H{"user":savedUser})
 	
 }
+
+
