@@ -54,9 +54,9 @@ func logRus() {
 	//logrus.Println("Hi I Am Logrus")
 	logrus.SetLevel(logrus.DebugLevel)
 	logrus.SetReportCaller(true)
-	logrus.SetFormatter(&logrus.TextFormatter{
-		DisableTimestamp: false,
-		FullTimestamp: false,
+	logrus.SetFormatter(&logrus.JSONFormatter{
+		DisableTimestamp: true,
+		PrettyPrint: true,
 
 	})
 

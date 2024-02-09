@@ -1,4 +1,24 @@
-level=debug msg=Debug func=main.logRus file="/home/lemon/Desktop/RestApi-Go/Gin-RestApi/main.go:67"
-level=info msg=Info func=main.logRus file="/home/lemon/Desktop/RestApi-Go/Gin-RestApi/main.go:68"
-level=warning msg=Warn func=main.logRus file="/home/lemon/Desktop/RestApi-Go/Gin-RestApi/main.go:69"
-level=error msg=Error func=main.logRus file="/home/lemon/Desktop/RestApi-Go/Gin-RestApi/main.go:70"
+{
+  "file": "/home/lemon/Desktop/RestApi-Go/Gin-RestApi/main.go:67",
+  "func": "main.logRus",
+  "level": "debug",
+  "msg": "Debug"
+}
+{
+  "file": "/home/lemon/Desktop/RestApi-Go/Gin-RestApi/main.go:68",
+  "func": "main.logRus",
+  "level": "info",
+  "msg": "Info"
+}
+{
+  "file": "/home/lemon/Desktop/RestApi-Go/Gin-RestApi/main.go:69",
+  "func": "main.logRus",
+  "level": "warning",
+  "msg": "Warn"
+}
+{
+  "file": "/home/lemon/Desktop/RestApi-Go/Gin-RestApi/main.go:70",
+  "func": "main.logRus",
+  "level": "error",
+  "msg": "Error"
+}
