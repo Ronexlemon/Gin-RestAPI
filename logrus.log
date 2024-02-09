@@ -1,4 +1,4 @@
-time="2024-02-09T06:28:25+03:00" level=debug msg=Debug
-time="2024-02-09T06:28:25+03:00" level=info msg=Info
-time="2024-02-09T06:28:25+03:00" level=warning msg=Warn
-time="2024-02-09T06:28:25+03:00" level=error msg=Error
+level=debug msg=Debug func=main.logRus file="/home/lemon/Desktop/RestApi-Go/Gin-RestApi/main.go:67"
+level=info msg=Info func=main.logRus file="/home/lemon/Desktop/RestApi-Go/Gin-RestApi/main.go:68"
+level=warning msg=Warn func=main.logRus file="/home/lemon/Desktop/RestApi-Go/Gin-RestApi/main.go:69"
+level=error msg=Error func=main.logRus file="/home/lemon/Desktop/RestApi-Go/Gin-RestApi/main.go:70"

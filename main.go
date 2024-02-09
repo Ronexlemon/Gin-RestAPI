@@ -53,9 +53,16 @@ func getDefault(c *gin.Context) {
 func logRus() {
 	//logrus.Println("Hi I Am Logrus")
 	logrus.SetLevel(logrus.DebugLevel)
+	logrus.SetReportCaller(true)
+	logrus.SetFormatter(&logrus.TextFormatter{
+		DisableTimestamp: false,
+		FullTimestamp: false,
+
+	})
 
 	f, _ := os.Create("logrus.log")
-	logrus.SetOutput(f)
+	multi := io.MultiWriter(f,os.Stdout)
+	logrus.SetOutput(multi)
 		logrus.Traceln("Trace")
 		logrus.Debugln("Debug")
 		logrus.Infoln("Info")
