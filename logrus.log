@@ -1,0 +1,4 @@
+time="2024-02-09T06:28:25+03:00" level=debug msg=Debug
+time="2024-02-09T06:28:25+03:00" level=info msg=Info
+time="2024-02-09T06:28:25+03:00" level=warning msg=Warn
+time="2024-02-09T06:28:25+03:00" level=error msg=Error
