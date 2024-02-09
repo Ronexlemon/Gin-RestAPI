@@ -16,11 +16,14 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/mattn/go-colorable"
+	"github.com/sirupsen/logrus"
+
 	// "github.com/joho/godotenv"
 )
 
 func main() {
 	router := gin.Default()
+	logRus()
 
 	gin.DebugPrintRouteFunc = func(httpMethod, absolutePath, handlerName string, nuHandlers int) {
 		log.Printf("endpoint formatted information is %v %v %v %v", httpMethod, absolutePath, handlerName, nuHandlers)
@@ -46,6 +49,21 @@ func main() {
 func getDefault(c *gin.Context) {
 	c.JSON(http.StatusAccepted, gin.H{"Data": "hello"})
 }
+
+
+//LOGRUS
+func logRus(){
+	logrus.Println("Hi I Am Logrus")
+	logrus.SetLevel(logrus.TraceLevel)
+	logrus.Traceln("Trace")
+	logrus.Debugln("Debug")
+	logrus.Infoln("Info")
+	logrus.Warnln("Warn")
+	logrus.Errorln("Error")
+	logrus.Panicln("Panic")
+}
+
+
 
 // func loadDatabase() {
 // 	database.Connect()
