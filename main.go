@@ -46,6 +46,21 @@ func main() {
 }
 
 func getDefault(c *gin.Context) {
+	logrus.WithField("Info","CreateFile").Info("Starting file creation Info")
+	logrus.WithField("Info","CreateFile").Debug("Starting file creation")
+	f, err := os.Create("logrus.log")
+
+	if err !=nil{
+		logrus.WithFields(logrus.Fields{
+			"Method": "CreateFile",
+			"error": true,
+
+		}).Error(err.Error())
+		
+	}
+	logrus.WithField("Info","CreateFile").Debug("End file creation")
+	multi := io.MultiWriter(f,os.Stdout)
+	logrus.SetOutput(multi)
 	c.JSON(http.StatusAccepted, gin.H{"Data": "hello"})
 }
 
@@ -60,9 +75,7 @@ func logRus() {
 
 	})
 
-	f, _ := os.Create("logrus.log")
-	multi := io.MultiWriter(f,os.Stdout)
-	logrus.SetOutput(multi)
+	
 		logrus.Traceln("Trace")
 		logrus.Debugln("Debug")
 		logrus.Infoln("Info")
